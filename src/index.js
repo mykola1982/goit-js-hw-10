@@ -12,6 +12,14 @@ const refs = {
     countryInfo: document.querySelector('.country-info'),
 };
 
+const notifyOptions = {
+    position: 'center-center',
+    width: '400px',
+    fontSize: '20px',
+
+
+};
+
 refs.inputSearchCountry.addEventListener(
     'input',
     debounce(onInputSearchCountry, DEBOUNCE_DELAY)
@@ -26,14 +34,14 @@ function onInputSearchCountry(evt) {
         })
         .catch(error => {
             console.log(error);
-            Notify.failure('Oops, there is no country with that name');
+            Notify.failure('Oops, there is no country with that name', notifyOptions);
             clearMarkup();
         });
 }
 
 function createMarkup(data) {
     if (data.length > 10) {
-        Notify.info('Too many matches found. Please enter a more specific name.');
+        Notify.info('Too many matches found. Please enter a more specific name.', notifyOptions);
         clearMarkup();
         return;
     }
