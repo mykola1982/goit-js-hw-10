@@ -25,6 +25,7 @@ ul {
 
 li {
   display: flex;
+  align-items: center;
 }
 
 .country {
@@ -33,6 +34,7 @@ li {
 
 .wrapper-name-country {
   display: flex;
+  align-items: center;
 }
 
 .info-list {

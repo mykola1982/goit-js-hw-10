@@ -42,7 +42,7 @@ function createMarkup(data) {
 
         const markupCountryList = data.map(({ name, flags }) => {
             return `<li class="country-item">
-                       <img src="${flags.svg}" alt="" width="50px" />
+                       <img src="${flags.svg}" alt="" width="60px" height="40px"/>
                        <h3 class="country">${name.official}</h3>
                    </li>`;
         });
@@ -57,18 +57,18 @@ function createMarkup(data) {
         const languagesNormaleize = Object.values(languages).join(', ');
 
         const markupCountryInfo = ` <div class="wrapper-name-country">
-                <img src="${flags.svg}" alt=""  width="80px" />
+                <img src="${flags.svg}" alt=""  width="60px"  height="40px" ; />
                 <h1 class="country">${name.official}</h1>
             </div>
             <ul class="info-list">
                 <li class ="info-item">
-                    Capital:<span> ${capital[0]}</span>
+                    Capital:&nbsp<span> ${capital[0]}</span>
                 </li>
                 <li class ="info-item">
-                    Population:<span> ${population}</span>
+                    Population:&nbsp<span> ${population}</span>
                 </li >
                 <li class ="info-item">
-                    Languages:<span> ${languagesNormaleize}</span>
+                    Languages:&nbsp<span> ${languagesNormaleize}</span>
                 </li>
             </ul>`;
 
