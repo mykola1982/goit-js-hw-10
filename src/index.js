@@ -16,8 +16,6 @@ const notifyOptions = {
     position: 'center-center',
     width: '400px',
     fontSize: '20px',
-
-
 };
 
 refs.inputSearchCountry.addEventListener(
@@ -41,7 +39,10 @@ function onInputSearchCountry(evt) {
 
 function createMarkup(data) {
     if (data.length > 10) {
-        Notify.info('Too many matches found. Please enter a more specific name.', notifyOptions);
+        Notify.info(
+            'Too many matches found. Please enter a more specific name.',
+            notifyOptions
+        );
         clearMarkup();
         return;
     }
@@ -88,4 +89,4 @@ function createMarkup(data) {
 function clearMarkup() {
     refs.countryInfo.innerHTML = '';
     refs.countryList.innerHTML = '';
-};
+}
