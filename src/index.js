@@ -57,7 +57,7 @@ function createMarkup(data) {
         const languagesNormaleize = Object.values(languages).join(', ');
 
         const markupCountryInfo = ` <div class="wrapper-name-country">
-                <img src="${flags.svg}" alt=""  width="50px" />
+                <img src="${flags.svg}" alt=""  width="80px" />
                 <h1 class="country">${name.official}</h1>
             </div>
             <ul class="info-list">
