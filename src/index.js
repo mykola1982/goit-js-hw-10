@@ -26,6 +26,10 @@ refs.inputSearchCountry.addEventListener(
 function onInputSearchCountry(evt) {
     const name = evt.target.value.trim();
 
+    if (!name) {
+        return;
+    }
+
     fetchCountries(name)
         .then(data => {
             createMarkup(data);
